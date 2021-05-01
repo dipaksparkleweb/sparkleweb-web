@@ -1,0 +1,70 @@
+
+<div id="wrapper" *ngIf="user">
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container-fluid">
+      <div class="brand">
+        <a routerLink="/admin/home" routerLinkActive="active"><img src="assets/img/header_logo.png" style="width: 140px;"
+            alt="Klorofil Logo" class="img-responsive logo"></a>
+      </div>
+      <div class="navbar-btn">
+        <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+      </div>
+      <form class="navbar-form navbar-left">
+        <div class="input-group">
+          <input type="text" value="" class="form-control" placeholder="Search dashboard...">
+          <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+        </div>
+      </form>
+      <div id="navbar-menu">
+      </div>
+    </div>
+  </nav>
+  <div id="sidebar-nav" class="sidebar">
+    <div class="sidebar-scroll">
+      <nav>
+        <ul class="nav">
+          <li class="w-100"><a routerLink="/admin/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i
+                class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+          <!-- <li><a routerLink="/users" routerLinkActive="active" class=""><i class="lnr lnr-code"></i> <span>Users</span></a></li> -->
+          <li class="w-100"><a routerLink="/admin/changepassword" routerLinkActive=""><i class="lnr lnr-chart-bars"></i>
+              <span>Change Password</span></a></li>
+              <li class="w-100">
+                <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Blog Post</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                <div id="subPages" class="collapse ">
+                    <ul class="nav">
+                        <li class="w-100"><a routerLink="/admin/bloglist" routerLinkActive=""  class="">Blog</a></li>
+                        <li class="w-100"><a routerLink="/admin/categorylist"  routerLinkActive="" class="">Category</a></li>
+                        <li class="w-100"><a routerLink="/admin/taglist" routerLinkActive="" class="">Tag</a></li>
+                    </ul>
+                </div>
+            </li>
+
+          <li class="w-100"><a (click)="logout()"><i class="lnr lnr-linearicons"></i> <span>Logout</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- END LEFT SIDEBAR -->
+  <alert></alert>
+  <router-outlet></router-outlet>
+  <!--<div class="clearfix"></div>-->
+  <footer>
+    <div class="container-fluid">
+      <p class="copyright">© 2017 <a href="#" target="_blank">Theme I Need</a>. All Rights
+        Reserved.</p>
+    </div>
+  </footer>
+  	<!-- admin Panel -->
+    <!-- <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="assets/vendor/chartist/js/chartist.min.js"></script>
+    <script src="assets/scripts/klorofil-common.js"></script> -->
+
+</div>
+
+
+  <alert></alert>
+  <router-outlet></router-outlet>

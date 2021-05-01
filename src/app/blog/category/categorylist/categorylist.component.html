@@ -1,0 +1,65 @@
+
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <!-- OVERVIEW -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Category List</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div>
+                                        <div class="float-left">
+                                        <nav class="navbar navbar-light bg-light">
+                                            <form class="form-inline">
+                                              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                            </form>
+                                          </nav>
+                                        </div>
+                                        <div class="float-right"><a routerLink="/admin/categoryadd" class="btn btn-primary "><b>+</b> Add new categories</a></div>
+                                    </div>
+                                        <table class="table table-striped">
+                                            <thead>
+                                                
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Username</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Steve</td>
+                                                    <td>Jobs</td>
+                                                    <td>@steve</td>
+                                                    <td><a class='btn btn-info btn-xs' href="#"> Edit</a> &nbsp; <a href="#" class="btn btn-danger btn-xs"> Del</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Simon</td>
+                                                    <td>Philips</td>
+                                                    <td>@simon</td>
+                                                    <td><a class='btn btn-info btn-xs' href="#"> Edit</a>&nbsp; <a href="#" class="btn btn-danger btn-xs"> Del</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Jane</td>
+                                                    <td>Doe</td>
+                                                    <td>@jane</td>
+                                                    <td><a class='btn btn-info btn-xs' href="#"> Edit</a>&nbsp; <a href="#" class="btn btn-danger btn-xs"> Del</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+            <!-- END OVERVIEW --> 
+        </div>
+    </div>
+    <!-- END MAIN CONTENT -->
+</div>
+<router-outlet></router-outlet>
